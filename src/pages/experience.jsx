@@ -41,8 +41,8 @@ export default function ExperiencePage({ onOpenExperience }) {
 								</div>
 								<span className="terminal-title">
 									<span className="company-name">{entry.company}</span>
-									<span className="project-separator"> / </span>
-									<span className="department-status">{entry.dept}</span>
+									{entry.dept ? <span className="project-separator"> / </span> : null}
+									{entry.dept ? <span className="department-status">{entry.dept}</span> : null}
 								</span>
 								<span className="duration-badge">{entry.duration}</span>
 							</div>
