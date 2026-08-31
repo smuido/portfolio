@@ -18,7 +18,8 @@ import excelImg from '../assets/excel.png'
 export default function HomePage({ onOpenProject, onOpenExperience, onNavigate }) {
 	const personalProjects = projects.filter((item) => item?.slug && item?.name && item?.description && item?.techStack?.length && item?.status)
 	const homepageProjects = personalProjects.slice(0, 2)
-	const currentExperience = experience.filter((item) => item?.jobTitle && item?.company && item?.location && item?.duration && item?.description)
+		const currentExperience = experience.filter((item) => item?.jobTitle && item?.company && item?.location && item?.duration && item?.description)
+		const homepageExperience = currentExperience.slice(0, 2)
 	const carouselCopies = 3
 	const techIcons = [
 		{ src: cImg, alt: 'C Programming Language' },
@@ -129,7 +130,7 @@ export default function HomePage({ onOpenProject, onOpenExperience, onNavigate }
 					<a href={import.meta.env.BASE_URL.replace(/\/$/, '') + '/experience'} onClick={(event) => handleViewAllClick(event, '/experience')} className="view-all">View all →</a>
 				</div>
 				<div className="experience-grid">
-					{currentExperience.map((exp) => (
+					{homepageExperience.map((exp) => (
 						<article
 							className="experience-card experience-card-link"
 							key={`${exp.jobTitle}-${exp.company}-${exp.dept}`}
