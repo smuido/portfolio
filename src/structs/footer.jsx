@@ -1,9 +1,9 @@
 import './footer.css'
 
 const socialLinks = [
-  { label: 'GitHub', href: 'https://github.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
+  { label: 'GitHub', href: 'https://github.com/smuido' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/smuido' },
+  { label: 'Instagram', href: 'https://instagram.com/thetatertotz' },
 ]
 
 export default function Footer() {
